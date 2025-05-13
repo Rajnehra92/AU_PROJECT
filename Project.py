@@ -78,3 +78,36 @@ class Atm:
         else:
             print("Incorrect PIN.")
 x1=Atm()
+
+##3
+#in,,,,,,
+class Student:  # Use CamelCase for class names for better readability
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def study(self):
+        print(f"My name is {self.name}, I am {self.age} years old, and I am studying.")
+
+
+class MDSchool(Student):  # Use CamelCase for class names
+    def __init__(self, name, age, dress_color=None):
+        super().__init__(name, age)  # Call the parent class's __init__ for name and age
+        self.dress_color = dress_color
+
+    def study(self):
+        super().study()  # Call the parent class's study method
+        print("We also play.")  # Added a period for proper grammar
+
+
+class RU(Student):  # Use CamelCase for class names
+    pass  # This class inherits from Student without adding any new functionality
+
+
+# Create instances
+student1 = MDSchool("Nehra", 22, "blue")  # Use descriptive variable names
+student2 = RU("Py", 23)  # Use descriptive variable names
+
+# Call methods
+student1.study()
+student2.study()
